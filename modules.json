@@ -1,0 +1,96 @@
+{
+  "base_url": "http://localhost:3000",
+  "auth": {
+    "login_url": "http://localhost:3000/login",
+    "api_url": "http://127.0.0.1:5700/api/v1/auth/login",
+    "token_key": "siabsen-token",
+    "user_key": "siabsen-user",
+    "username": "admin",
+    "password": "admin123"
+  },
+  "modules": [
+    {
+      "name": "01_login_page",
+      "url": "http://localhost:3000/login",
+      "output": "01_login_page.png",
+      "requires_auth": false,
+      "actions": [
+        {
+          "type": "inspect_dom"
+        }
+      ]
+    },
+    {
+      "name": "02_dashboard_ringkasan",
+      "url": "http://localhost:3000/dashboard",
+      "output": "02_dashboard_ringkasan.png",
+      "requires_auth": true,
+      "record_video": true,
+      "video_output": "02_dashboard_demo.gif",
+      "actions": [
+        {
+          "type": "click_text",
+          "text": "Ringkasan"
+        },
+        {
+          "type": "wait_ms",
+          "duration": 1000
+        }
+      ]
+    },
+    {
+      "name": "03_data_siswa_guru",
+      "url": "http://localhost:3000/dashboard",
+      "output": "03_data_siswa_guru.png",
+      "requires_auth": true,
+      "record_video": true,
+      "video_output": "03_data_siswa_demo.gif",
+      "actions": [
+        {
+          "type": "set_active_tab",
+          "tab_id": "data"
+        },
+        {
+          "type": "wait_ms",
+          "duration": 1500
+        }
+      ]
+    },
+    {
+      "name": "04_jadwal_pelajaran",
+      "url": "http://localhost:3000/dashboard",
+      "output": "04_jadwal_pelajaran.png",
+      "requires_auth": true,
+      "record_video": true,
+      "video_output": "04_jadwal_demo.gif",
+      "actions": [
+        {
+          "type": "set_active_tab",
+          "tab_id": "jadwal"
+        },
+        {
+          "type": "wait_ms",
+          "duration": 1500
+        }
+      ]
+    },
+    {
+      "name": "05_spp_keuangan",
+      "url": "http://localhost:3000/dashboard",
+      "output": "05_spp_keuangan.png",
+      "requires_auth": true,
+      "record_video": true,
+      "video_output": "05_spp_keuangan_demo.gif",
+      "actions": [
+        {
+          "type": "set_active_tab",
+          "tab_id": "keuangan"
+        },
+        {
+          "type": "wait_ms",
+          "duration": 1500
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+[package]
+name = "screenshotghaib"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+headless_chrome = "1.0"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+image = "0.25"
